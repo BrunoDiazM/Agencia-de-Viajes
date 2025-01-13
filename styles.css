@@ -129,31 +129,6 @@ nav ul li:hover::after {
   letter-spacing: 6px;
 }
 
-/* Redes sociales */
-.social {
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social li {
-  list-style: none;
-}
-
-.social li a {
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-
-.social li a:hover {
-  transform: scale(0.5) translateY(-15px);
-}
-
 /*Quienes Somos */
 :root {
   --primary-color: #ff6700; /* Naranja vibrante */
@@ -166,150 +141,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--light-color);
   color: var(--text-color);
-}
-
-header {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-header .nav-link {
-  color: var(--light-color) !important;
-}
-
-header .nav-link:hover {
-  color: var(--secondary-color) !important;
-}
-
-footer {
-  background-color: var(--secondary-color);
-  color: var(--light-color);
-}
-
-.btn-custom {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-  border: none;
-}
-
-.btn-custom:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-/*Servicios*/
-:root {
-  --primary-color: #ff6700; /* Naranja vibrante */
-  --secondary-color: #000000; /* Negro */
-  --light-color: #ffffff; /* Blanco */
-  --text-color: #333333; /* Gris oscuro para texto */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--light-color);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-header .nav-link {
-  color: var(--light-color) !important;
-}
-
-header .nav-link:hover {
-  color: var(--secondary-color) !important;
-}
-
-footer {
-  background-color: var(--secondary-color);
-  color: var(--light-color);
-  margin-top: auto; /* Asegura que el footer esté al pie */
-}
-
-.btn-custom {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-  border: none;
-}
-
-.btn-custom:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-/*Cleintes*/
-
-:root {
-  --primary-color: #ff6700; /* Naranja vibrante */
-  --secondary-color: #000000; /* Negro */
-  --light-color: #ffffff; /* Blanco */
-  --text-color: #333333; /* Gris oscuro para texto */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--light-color);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-header .nav-link {
-  color: var(--light-color) !important;
-}
-
-header .nav-link:hover {
-  color: var(--secondary-color) !important;
-}
-
-footer {
-  background-color: var(--secondary-color);
-  color: var(--light-color);
-  margin-top: auto; /* Asegura que el footer esté al pie */
-}
-
-.rating {
-  color: var(--primary-color);
-  font-size: 1.5rem; /* Tamaño aumentado de las estrellas */
-}
-
-.card {
-  border: 1px solid var(--primary-color);
-  border-radius: 25px; /* Bordes ovalados */
-}
-
-.card-img-top {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: 1rem;
-}
-
-/*Clientes*/
-:root {
-  --primary-color: #ff6700; /* Naranja vibrante */
-  --secondary-color: #000000; /* Negro */
-  --light-color: #ffffff; /* Blanco */
-  --text-color: #333333; /* Gris oscuro */
-}
-
-body {
-  background-color: var(--light-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -332,6 +163,37 @@ footer {
   background-color: var(--secondary-color);
   color: var(--light-color);
   margin-top: auto;
+}
+
+.btn-custom {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/*Clientes*/
+
+.rating {
+  color: var(--primary-color);
+  font-size: 1.5rem; /* Tamaño aumentado de las estrellas */
+}
+
+.card {
+  border: 1px solid var(--primary-color);
+  border-radius: 25px; /* Bordes ovalados */
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
 }
 
 .card {
