@@ -1,0 +1,299 @@
+/* Reset y configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+/* Encabezado */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo del encabezado */
+header .logo {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Elementos del menú de navegación */
+nav ul li {
+  list-style: none;
+  display: inline-grid;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #860e0e;
+  position: relative;
+  z-index: 2;
+  /* transition: color 0.4s; */
+}
+
+/* Efecto de fondo en hover */
+nav ul li::after {
+  content: "";
+  background: #f2f3f3;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+}
+
+nav ul li:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+/* Sección principal (showcase) */
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* Estilo para texto */
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 3em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 5em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+/* Redes sociales */
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+/*Quienes Somos */
+:root {
+  --primary-color: #ff6700; /* Naranja vibrante */
+  --secondary-color: #000000; /* Negro */
+  --light-color: #ffffff; /* Blanco */
+  --text-color: #333333; /* Gris oscuro para texto */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+header .nav-link {
+  color: var(--light-color) !important;
+}
+
+header .nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+.btn-custom {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+/*Servicios*/
+:root {
+  --primary-color: #ff6700; /* Naranja vibrante */
+  --secondary-color: #000000; /* Negro */
+  --light-color: #ffffff; /* Blanco */
+  --text-color: #333333; /* Gris oscuro para texto */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+header .nav-link {
+  color: var(--light-color) !important;
+}
+
+header .nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  margin-top: auto; /* Asegura que el footer esté al pie */
+}
+
+.btn-custom {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/*Cleintes*/
+
+:root {
+  --primary-color: #ff6700; /* Naranja vibrante */
+  --secondary-color: #000000; /* Negro */
+  --light-color: #ffffff; /* Blanco */
+  --text-color: #333333; /* Gris oscuro para texto */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+header .nav-link {
+  color: var(--light-color) !important;
+}
+
+header .nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  margin-top: auto; /* Asegura que el footer esté al pie */
+}
+
+.rating {
+  color: var(--primary-color);
+  font-size: 1.5rem; /* Tamaño aumentado de las estrellas */
+}
+
+.card {
+  border: 1px solid var(--primary-color);
+  border-radius: 25px; /* Bordes ovalados */
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
