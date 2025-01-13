@@ -297,3 +297,58 @@ footer {
   border-radius: 50%;
   margin-top: 1rem;
 }
+
+/*Clientes*/
+:root {
+  --primary-color: #ff6700; /* Naranja vibrante */
+  --secondary-color: #000000; /* Negro */
+  --light-color: #ffffff; /* Blanco */
+  --text-color: #333333; /* Gris oscuro */
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+header .nav-link {
+  color: var(--light-color) !important;
+}
+
+header .nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  margin-top: auto;
+}
+
+.card {
+  border: 2px solid var(--primary-color);
+  border-radius: 25px; /* Bordes ovalados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.rating {
+  color: #ffd700; /* Color dorado para las estrellas */
+  font-size: 1.5rem; /* Estrellas más grandes */
+}
