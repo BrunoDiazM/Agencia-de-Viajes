@@ -36,7 +36,6 @@ nav ul li {
   color: #860e0e;
   position: relative;
   z-index: 2;
-  /* transition: color 0.4s; */
 }
 
 /* Efecto de fondo en hover */
@@ -129,12 +128,12 @@ nav ul li:hover::after {
   letter-spacing: 6px;
 }
 
-/*Quienes Somos */
+/* Paginas secundarias*/
 :root {
-  --primary-color: #ff6700; /* Naranja vibrante */
-  --secondary-color: #000000; /* Negro */
-  --light-color: #ffffff; /* Blanco */
-  --text-color: #333333; /* Gris oscuro para texto */
+  --primary-color: #ff6700; 
+  --secondary-color: #000000; 
+  --light-color: #ffffff; 
+  --text-color: #333333; 
 }
 
 body {
@@ -176,16 +175,14 @@ footer {
   color: var(--primary-color);
 }
 
-/*Clientes*/
-
 .rating {
   color: var(--primary-color);
-  font-size: 1.5rem; /* Tamaño aumentado de las estrellas */
+  font-size: 1.5rem; 
 }
 
 .card {
   border: 1px solid var(--primary-color);
-  border-radius: 25px; /* Bordes ovalados */
+  border-radius: 25px; 
 }
 
 .card-img-top {
@@ -198,7 +195,7 @@ footer {
 
 .card {
   border: 2px solid var(--primary-color);
-  border-radius: 25px; /* Bordes ovalados */
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -211,6 +208,6 @@ footer {
 }
 
 .rating {
-  color: #ffd700; /* Color dorado para las estrellas */
-  font-size: 1.5rem; /* Estrellas más grandes */
+  color: #ffd700; 
+  font-size: 1.5rem; 
 }
