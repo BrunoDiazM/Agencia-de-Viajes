@@ -156,13 +156,44 @@ main p {
   line-height: 1.6; /* Mejora la legibilidad del texto */
 }
 
-/* Footer */
-footer {
-  background-color: #02040f; /* Fondo del footer */
-  color: #ffffff; /* Texto del footer en blanco */
-  margin-top: auto;
-  text-align: center;
+/* Estilos generales del footer */
+.footer {
+  background-color: #333;
+  color: white;
   padding: 20px;
+  text-align: center;
+}
+
+/* Contenedor de los enlaces sociales */
+.social-links {
+  margin-bottom: 15px;
+}
+
+/* Estilo para los iconos sociales */
+.social-icon {
+  font-size: 25px;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff9800; /* Puedes cambiar el color al que quieras */
+}
+
+/* Estilos para la sección de contacto */
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #ff9800; /* Cambia el color en hover si lo deseas */
 }
 
 /* Botones */
@@ -179,17 +210,27 @@ footer {
 
 /* Tarjetas */
 .card {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  padding: 20px; /* Espaciado interno de la tarjeta */
+  border: 1px solid #ddd; /* Opcional: borde para la tarjeta */
+  border-radius: 10px; /* Borde redondeado */
+  max-width: 300px; /* Ancho máximo de la tarjeta */
   border: 2px solid #ff6700;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para las imágenes dentro de las tarjetas de servicio */
 .card-img-top {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: 1rem;
+  align-items: center;
+  width: 100%; /* Ocupa el 100% del contenedor */
+  height: 250px; /* Ajustamos la altura a 250px para mantener una proporción */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  border-radius: 8px; /* Le da un borde redondeado a la imagen */
 }
 
 .rating {
@@ -293,3 +334,4 @@ footer {
     height: 100px;
   }
 }
+
