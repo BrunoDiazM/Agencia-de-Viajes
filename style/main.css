@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #f0d994;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #02040f;
+  color: #ffffff;
+}
+header .logo {
+  color: #ffffff;
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  margin: 0;
+}
+header nav ul li {
+  list-style: none;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+header nav ul li::after {
+  content: "";
+  background: #f2f3f3;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+header nav ul li:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.showcase .text {
+  position: relative;
+  z-index: 10;
+}
+.showcase .text h2 {
+  font-size: 3em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.showcase .text h3 {
+  font-size: 5em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.showcase .text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.showcase .text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: letter-spacing 0.2s ease;
+}
+.showcase .text a:hover {
+  letter-spacing: 6px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 300px;
+  border: 2px solid #ff6700;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card .card-img-top {
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer .social-links {
+  margin-bottom: 15px;
+}
+.footer .social-icon {
+  font-size: 25px;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer .social-icon:hover {
+  color: #ff9800;
+}
+
+.btn-custom {
+  background-color: #ff6700;
+  color: #ffffff;
+  border: none;
+}
+.btn-custom:hover {
+  background-color: #02040f;
+  color: #ff6700;
+}
+
+@media (max-width: 390px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 5px;
+  }
+  .showcase {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+  .showcase video {
+    height: auto;
+  }
+  .text h2 {
+    font-size: 2em;
+  }
+  .text h3 {
+    font-size: 3em;
+  }
+  .text p {
+    font-size: 0.9em;
+  }
+  .text a {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+  .card {
+    margin: 10px;
+    padding: 15px;
+  }
+  .card-img-top {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 1366px) {
+  header {
+    padding: 20px 50px;
+  }
+  nav ul li {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .showcase {
+    padding: 50px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .text h2 {
+    font-size: 2.5em;
+  }
+  .text h3 {
+    font-size: 4em;
+  }
+  .text p {
+    font-size: 1em;
+  }
+  .text a {
+    font-size: 1em;
+    padding: 10px 25px;
+  }
+  .card {
+    margin: 15px;
+    padding: 20px;
+  }
+  .card-img-top {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

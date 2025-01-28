@@ -1,0 +1,304 @@
+// Reset y configuración general
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+// Fondo y colores generales
+body {
+  background-color: #f0d994; // Fondo de todas las páginas
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Mixins
+@mixin transition($property, $duration: 0.3s, $ease: ease) {
+  transition: $property $duration $ease;
+}
+
+// Encabezado
+header {
+  position: fixed; // Cambiado de absolute a fixed para fijar el encabezado
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px; // Ajusté el padding para que el header no sea tan grande
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #02040f;
+  color: #ffffff;
+
+  .logo {
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+ nav {
+    ul {
+      display: flex;
+      margin: 0; // Añadí margen 0 para evitar el desplazamiento
+
+      li {
+        list-style: none;
+        padding: 15px 35px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+
+        &::after {
+          content: "";
+          background: #f2f3f3;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          opacity: 0;
+          @include transition(all, 0.2s);
+        }
+
+        &:hover::after {
+          top: 50%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Sección principal (showcase)
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
+  .text {
+    position: relative;
+    z-index: 10;
+
+    h2 {
+      font-size: 3em;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 5em;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #fff;
+      margin: 20px 0;
+      font-weight: 400;
+      max-width: 700px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 1em;
+      background: #fff;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      color: #111;
+      letter-spacing: 2px;
+      @include transition(letter-spacing, 0.2s);
+
+      &:hover {
+        letter-spacing: 6px;
+      }
+    }
+  }
+}
+
+// Tarjetas
+.card {
+  display: flex;
+  flex-direction: column; // Asegura que los elementos se apilen verticalmente
+  align-items: center; // Centra los elementos horizontalmente
+  justify-content: center; // Centra los elementos verticalmente
+  text-align: center; // Centra el texto dentro de la tarjeta
+  padding: 20px; // Espaciado interno de la tarjeta
+  border: 1px solid #ddd; // Opcional: borde para la tarjeta
+  border-radius: 10px; // Borde redondeado
+  max-width: 300px; // Ancho máximo de la tarjeta
+  border: 2px solid #ff6700;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .card-img-top {
+    align-items: center;
+    width: 100%; // Ocupa el 100% del contenedor
+    height: 250px; // Ajustamos la altura a 250px para mantener una proporción
+    object-fit: cover; // Asegura que la imagen cubra el área sin distorsionarse
+    border-radius: 8px; // Le da un borde redondeado a la imagen
+  }
+}
+
+// Estilos generales del footer
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  .social-links {
+    margin-bottom: 15px;
+  }
+
+  .social-icon {
+    font-size: 25px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    @include transition(color, 0.3s);
+
+    &:hover {
+      color: #ff9800; // Puedes cambiar el color al que quieras
+    }
+  }
+}
+
+// Botones
+.btn-custom {
+  background-color: #ff6700;
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-color: #02040f;
+    color: #ff6700;
+  }
+}
+
+// Media query para dispositivos móviles
+@media (max-width: 390px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .showcase {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .showcase video {
+    height: auto;
+  }
+
+  .text h2 {
+    font-size: 2em;
+  }
+
+  .text h3 {
+    font-size: 3em;
+  }
+
+  .text p {
+    font-size: 0.9em;
+  }
+
+  .text a {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .card-img-top {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+// Media query para netbooks (1366x768)
+@media (max-width: 1366px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  nav ul li {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .showcase {
+    padding: 50px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .text h2 {
+    font-size: 2.5em;
+  }
+
+  .text h3 {
+    font-size: 4em;
+  }
+
+  .text p {
+    font-size: 1em;
+  }
+
+  .text a {
+    font-size: 1em;
+    padding: 10px 25px;
+  }
+
+  .card {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .card-img-top {
+    width: 100px;
+    height: 100px;
+  }
+}
