@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brunodiazm.github.io/Agencia-de-Viajes/sitemap.xml
